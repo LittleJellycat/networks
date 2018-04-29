@@ -20,6 +20,7 @@ for i in range(3, n):
             p[j] = adjacency_indices[j].__len__() / total_degree
     p.append(count / total_degree)
 
+
 def zero_to_nan(values):
     """Replace every 0 with 'nan' and return a copy."""
     return [float('nan') if x == 0 else x for x in values]
@@ -32,4 +33,6 @@ X = [X[i] / total_degree for i in range(X.__len__())]
 
 plt.plot(range(n), zero_to_nan(X), 'ro')
 plt.xlim(xmin=0)
+plt.xlabel('k')
+plt.ylabel('P(k)')
 plt.show()

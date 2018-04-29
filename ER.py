@@ -30,4 +30,6 @@ X = [numpy.average(X[m]) for m in range(n)]
 
 plt.plot(range(n), zero_to_nan(X), 'ro')
 plt.xlim(xmin=0, xmax=n)
+plt.xlabel('k')
+plt.ylabel('P(k)')
 plt.show()
